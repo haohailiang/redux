@@ -1,3 +1,5 @@
+暂时看到购物车
+
 # <a href='http://redux.js.org'><img src='https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67' height='60' alt='Redux Logo' aria-label='redux.js.org' /></a>
 
 Redux is a predictable state container for JavaScript apps.  
@@ -224,12 +226,12 @@ The **[Building React Applications with Idiomatic Redux](https://egghead.io/cour
 **[Practical Redux](https://www.educative.io/collection/5687753853370368/5707702298738688/)** is a paid interactive course by Redux co-maintainer [Mark Erikson](https://twitter.com/acemarke).  The course is designed to show how to apply the basic concepts of Redux to building something larger than a TodoMVC application.  It includes real-world topics like:
 
 
-- Adding Redux to a new Create-React-App project and configuring Hot Module Replacement for faster development 
-- Controling your UI behavior with Redux 
-- Using the Redux-ORM library to manage relational data in your Redux store 
-- Building a master/detail view to display and edit data 
-- Writing custom advanced Redux reducer logic to solve specific problems 
-- Optimizing performance of Redux-connected form inputs 
+- Adding Redux to a new Create-React-App project and configuring Hot Module Replacement for faster development
+- Controling your UI behavior with Redux
+- Using the Redux-ORM library to manage relational data in your Redux store
+- Building a master/detail view to display and edit data
+- Writing custom advanced Redux reducer logic to solve specific problems
+- Optimizing performance of Redux-connected form inputs
 
 And much more!  
 
