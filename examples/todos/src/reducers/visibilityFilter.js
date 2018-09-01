@@ -13,3 +13,5 @@ const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
 // state贡献一个'SHOW_ALL'
 
 export default visibilityFilter
+
+// 初始化值为 "SHOW_ALL"

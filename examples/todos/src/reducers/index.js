@@ -13,3 +13,8 @@ export default combineReducers({
 	todos,
 	visibilityFilter
 })
+
+// ES6 语法
+// 为 redux state 中提供的属性为 todos 和 visibilityFilter
+// 初始化值为 [] 和 "SHOW_ALL"
+// {todos: Array(0), visibilityFilter: "SHOW_ALL"}

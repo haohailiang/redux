@@ -1,5 +1,5 @@
 const todos = (state = [], action) => {
-	console.log( "reducers - todos", action );
+	// console.log( "reducers - todos", action );
 	switch (action.type) {
 		case 'ADD_TODO':
 			// 合并以前的状态
@@ -25,3 +25,5 @@ const todos = (state = [], action) => {
 // state贡献一个[]
 
 export default todos
+
+// 初始化值为 []

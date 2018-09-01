@@ -16,8 +16,12 @@ export const toggleTodo = id => ({
 	id
 })
 
+// 通过调用方法产生的 action
+
 export const VisibilityFilters = {
 	SHOW_ALL       : 'SHOW_ALL',
 	SHOW_COMPLETED : 'SHOW_COMPLETED',
 	SHOW_ACTIVE    : 'SHOW_ACTIVE'
 }
+
+// 直接产生的 action 集合

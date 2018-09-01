@@ -6,7 +6,10 @@ import App             from './components/App'
 import rootReducer     from './reducers'
 
 const store = createStore(rootReducer)
-console.log( store.getState() );
+
+// console.log( "store 中所有的 state: " );
+// console.log( store.getState() );
+// 里边的 state 在 rootReducer reducer 中都可以找到
 
 render(
 	<Provider store={store}>

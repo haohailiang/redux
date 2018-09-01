@@ -19,7 +19,7 @@ const getVisibleTodos = (todos, filter) => {
 			throw new Error('Unknown filter: ' + filter)
 	}
 	// {id: 1, text: "2", completed: false}
-	console.log(ret);
+	// console.log(ret);
 	return ret;
 }
 // ?state里边装的什么,怎么查看[都在store里边]
