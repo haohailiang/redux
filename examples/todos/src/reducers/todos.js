@@ -1,5 +1,5 @@
 const todos = (state = [], action) => {
-	// console.log( "reducers - todos", action );
+	// console.log( "进入 reducer todos" );
 	switch (action.type) {
 		case 'ADD_TODO':
 			// 合并以前的状态
@@ -11,6 +11,8 @@ const todos = (state = [], action) => {
 					completed : false
 				}
 			]
+        // state 默认为 [], 触发 ADD_TODO action
+        // state 添加进去
 		case 'TOGGLE_TODO':
 			return state.map(todo =>
 				(todo.id === action.id)

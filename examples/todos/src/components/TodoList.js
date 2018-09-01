@@ -2,7 +2,7 @@ import React     from 'react'
 import PropTypes from 'prop-types'
 import Todo      from './Todo'
 
-// 属性todos和方法toggleTodo都从container中获取过来
+// 属性todos和方法toggleTodo都从container/VisibleTodoList中获取过来
 // 这个todos是过滤之后的todos
 // toggleTodo是切换方法
 // todo: {id: 1, text: "2", completed: false}
