@@ -21,3 +21,5 @@ export default combineReducers({
 // 初始化值为 [] 和 "SHOW_ALL"
 // {todos: Array(0), visibilityFilter: "SHOW_ALL"}
 // 每个 reducer 都会被遍历一遍
+
+// 怎么查看触发的action
