@@ -15,12 +15,9 @@
 	</p>
 </div>
 <script>
-// producer
-function counter(state, action) {
-	if (typeof state === 'undefined') {
-		return 0
-	}
-
+// reducer
+function counter(state=0, action) {
+	console.log( "触发的action", action );
 	switch (action.type) {
 		case 'INCREMENT':
 			return state + 1
@@ -42,7 +39,10 @@ function render() {
 render()
 
 // 状态发生变化后更新视图
-store.subscribe(render)
+store.subscribe(() => {
+	console.log( "redux state 发生了变化", store.getState() );
+	render();
+})
 
 document.getElementById('increment')
 	.addEventListener('click', function () {
