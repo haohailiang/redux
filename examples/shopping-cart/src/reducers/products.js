@@ -12,9 +12,11 @@ const products = (state, action) => {
       return state
   }
 }
+// 单个指定商品的库存
 
 const byId = (state = {}, action) => {
   switch (action.type) {
+    // 弄啥嘞, 暂时没有看懂
     case RECEIVE_PRODUCTS:
       return {
         ...state,
@@ -34,6 +36,10 @@ const byId = (state = {}, action) => {
       return state
   }
 }
+// 产品库存信息
+// {id: 1, title: "苹果", price: 10, inventory: 2}
+// {id: 2, title: "黄瓜", price: 20, inventory: 10}
+// {id: 3, title: "桔子", price: 30, inventory: 5}
 
 const visibleIds = (state = [], action) => {
   switch (action.type) {
@@ -43,14 +49,18 @@ const visibleIds = (state = [], action) => {
       return state
   }
 }
+// 没什么鸟用
 
 export default combineReducers({
   byId,
   visibleIds
 })
 
-export const getProduct = (state, id) =>
-  state.byId[id]
+// 获取库存产品的ID
+export const getProduct = (state, id) => {
+	console.log( state, id, state.byId[id] );
+	return state.byId[id]
+}
 
-export const getVisibleProducts = state =>
-  state.visibleIds.map(id => getProduct(state, id))
+// 没有什么鸟用
+export const getVisibleProducts = state => state.visibleIds.map(id => getProduct(state, id))

@@ -7,7 +7,7 @@ import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
 
 const ProductsContainer = ({ products, addToCart }) => (
-  <ProductsList title="Products">
+  <ProductsList title="产品">
     {products.map(product =>
       <ProductItem
         key={product.id}
@@ -30,6 +30,8 @@ ProductsContainer.propTypes = {
 const mapStateToProps = state => ({
   products: getVisibleProducts(state.products)
 })
+
+// 这个 state 是 redux 中的 state, 可以看到属性 products 属性
 
 export default connect(
   mapStateToProps,

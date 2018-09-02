@@ -9,8 +9,11 @@ import { getAllProducts }               from './actions'
 import App                              from './containers/App'
 
 const middleware = [ thunk ];
+// 异步操作
+
 if (process.env.NODE_ENV !== 'production') {
   middleware.push(createLogger());
+  // 测试环境添加 日志
 }
 
 const store = createStore(
@@ -20,9 +23,14 @@ const store = createStore(
 
 store.dispatch(getAllProducts())
 
+// 中间件加在 action 和 reducer 之间
+// 所以放在 store.dispatch 中
+
 render(
   <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
 )
+
+// 主要讲 中间件 和 异步操作
