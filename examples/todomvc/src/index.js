@@ -9,6 +9,10 @@ import 'todomvc-app-css/index.css'
 
 const store = createStore(reducer)
 
+store.subscribe( () => {
+	console.log( "store 变化了: ", store.getState() );
+})
+
 render(
   <Provider store={store}>
     <App />

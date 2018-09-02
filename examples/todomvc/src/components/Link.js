@@ -5,7 +5,10 @@ import classnames from 'classnames'
 const Link = ({ active, children, setFilter }) =>
   (
     <a
-      className={classnames({ selected: active })}
+
+      className={ active?'selected':''  }
+	  className={classnames({ selected: active })}
+
       style={{ cursor: 'pointer' }}
       onClick={() => setFilter()}
     >
@@ -13,6 +16,7 @@ const Link = ({ active, children, setFilter }) =>
     </a>
   )
 
+// classnames 可以动态的设置多个变化的类名
 
 Link.propTypes = {
   active: PropTypes.bool.isRequired,

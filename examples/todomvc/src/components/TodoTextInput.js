@@ -19,9 +19,10 @@ export default class TodoTextInput extends Component {
 		const text = e.target.value.trim()
 		if (e.which === 13) {
 			this.props.onSave(text)
-			// newTodo哪里来的
+			// newTodo哪里来的 - 随便一个值 - 初始值为 true
 			console.log( this.props.newTodo );
 			if (this.props.newTodo) {
+                // 为了置空输入框
 				this.setState({ text: '' })
 			}
 		}
@@ -31,6 +32,8 @@ export default class TodoTextInput extends Component {
 		this.setState({ text: e.target.value })
 	}
 
+    // 不是新添加的输入框则 直接保存
+    // 新值这没有 blur 效果
 	handleBlur = e => {
 		if (!this.props.newTodo) {
 			this.props.onSave(e.target.value)
@@ -38,6 +41,8 @@ export default class TodoTextInput extends Component {
 	}
 
 	render() {
+        // 检验默认的 props newTodo 的值
+		// console.log( this.props.newTodo );
 		return (
 			<input className={
 				classnames({

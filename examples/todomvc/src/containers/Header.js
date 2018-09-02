@@ -8,11 +8,14 @@ export const Header = ({ addTodo }) => (
 	<header className="header">
 		<h1>todos</h1>
 		{/* newTodo哪里来的 */}
+		{/* 新的未定义的属性默认都是 true , 可以用作标记 */}
+		{/* 随便写也是 true */}
 		<TodoTextInput
 			newTodo
+			suibianxie
 			onSave={(text) => {
 				if (text.length !== 0) {
-					// 不用派发事件吗
+					// 派发 action 中的 addTodo action
 					addTodo(text)
 				}
 			}}
@@ -26,3 +29,7 @@ Header.propTypes = {
 }
 
 export default connect(null, { addTodo })(Header)
+// addTodo 绑定到本组件的方法属性
+// addTodo 派发到 redux action 中
+// 具体 action 为 { type : types.ADD_TODO, text }
+// { type : "ADD_TODO", text }

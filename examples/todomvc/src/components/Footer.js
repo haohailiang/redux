@@ -4,10 +4,12 @@ import FilterLink from '../containers/FilterLink'
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../constants/TodoFilters'
 
 const FILTER_TITLES = {
-  [SHOW_ALL]: 'All',
-  [SHOW_ACTIVE]: 'Active',
-  [SHOW_COMPLETED]: 'Completed'
+  [SHOW_ALL]       : 'All',
+  [SHOW_ACTIVE]    : 'Active',
+  [SHOW_COMPLETED] : 'Completed'
 }
+
+// 修改对应的显示
 
 const Footer = (props) => {
   const { activeCount, completedCount, onClearCompleted } = props
@@ -32,7 +34,7 @@ const Footer = (props) => {
           className="clear-completed"
           onClick={onClearCompleted}
         >Clear completed</button>
-        
+
       }
     </footer>
   )

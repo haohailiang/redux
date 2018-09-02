@@ -7,7 +7,7 @@ const MainSection = ({ todosCount, completedCount, actions }) =>
   (
     <section className="main">
       {
-        !!todosCount && 
+        !!todosCount &&
         <span>
           <input
             className="toggle-all"
@@ -15,6 +15,7 @@ const MainSection = ({ todosCount, completedCount, actions }) =>
             checked={completedCount === todosCount}
           />
           <label onClick={actions.completeAllTodos}/>
+		  {/* 全选按钮, 前边控制样式, 后边控制行为 */}
         </span>
       }
       <VisibleTodoList />
