@@ -17,4 +17,7 @@ const render = () => ReactDOM.render(
 )
 
 render()
+// 初次渲染
+
 store.subscribe(render)
+// 监听变化 - 重新渲染

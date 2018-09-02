@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes            from 'prop-types'
 
+// 这是一个木偶组件
 class Counter extends Component {
 	constructor(props) {
 		super(props);
