@@ -1,5 +1,5 @@
 const todos = (state = [], action) => {
-	// console.log( "进入 reducer todos" );
+	console.log( 'action, state', action, state );
 	switch (action.type) {
 		case 'ADD_TODO':
 			// 合并以前的状态

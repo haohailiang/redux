@@ -7,6 +7,10 @@ import reducer         from './reducers'
 
 const store = createStore(reducer)
 
+store.subscribe(() => {
+	console.log( "store的变化: ", store.getState() );
+});
+
 render(
 	<Provider store={store}>
 		<App />

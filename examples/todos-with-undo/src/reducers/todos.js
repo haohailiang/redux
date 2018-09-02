@@ -1,6 +1,8 @@
 import undoable, { includeAction } from 'redux-undo'
 
 const todo = (state, action) => {
+	// console.log( "action发生了变化: ", action, state );
+
 	switch (action.type) {
 		case 'ADD_TODO':
 			return {
@@ -38,7 +40,9 @@ const todos = (state = [], action) => {
 		}
 }
 
-// 库自己带的,看不懂了
+// ADD_TODO, TOGGLE_TODO 这2个动作可以加入到撤销当中
 const undoableTodos = undoable(todos, { filter: includeAction(['ADD_TODO', 'TOGGLE_TODO']) })
 
 export default undoableTodos
+
+// 只有这个 reducer 可以重做

@@ -14,6 +14,9 @@ const mapStateToProps = (state) => ({
 	canRedo: state.todos.future.length > 0
 })
 
+// canUndo 过去是否可以撤销
+// canRedo 是否有可以重做的
+
 const mapDispatchToProps = ({
 	onUndo: UndoActionCreators.undo,
 	onRedo: UndoActionCreators.redo
